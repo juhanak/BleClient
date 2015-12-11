@@ -10,7 +10,7 @@ BLE client library that lists available SensorTags, connects to them and reads d
 
 ## SimpleApp
 Demo application that reads data from SensorTag's sensors and shows it as a graph. 
-
+![SimpleApp](https://github.com/juhanak/BleClient/blob/master/images/SimpleApp.png?raw=true "SimpleApp")
 ## BleGame
 Do you want to control a spaceship with SensorTag? The game shows how to read data from Bluetooth and use it to control 
 a player in a simple game. 
