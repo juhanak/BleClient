@@ -1,0 +1,29 @@
+﻿<local:GameObjectControlBase
+    x:Name="thisControl"
+    x:Class="BleGame.Controls.ProjectileControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BleGame.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="50"
+    d:DesignWidth="50">
+
+    <Grid>
+        <Grid>
+            <Grid RenderTransformOrigin="0.5, 0.5">
+                <Image
+                    x:Name="projectileImage"
+                    Stretch="Uniform"
+                    Source="{Binding Path=ImageUri, ElementName=thisControl, FallbackValue='ms-appx:///Assets/PhotonTorpedo.png'}" />
+                <Grid.RenderTransform>
+                    <RotateTransform x:Name="rotateTransform" Angle="{Binding Path=Angle, ElementName=thisControl}" />
+                </Grid.RenderTransform>
+            </Grid>
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="translateTransform" X="{Binding Path=X, ElementName=thisControl}" Y="{Binding Path=Y, ElementName=thisControl}" />
+            </Grid.RenderTransform>
+        </Grid>
+    </Grid>
+</local:GameObjectControlBase>

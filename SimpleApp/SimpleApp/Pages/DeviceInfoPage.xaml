@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="SimpleApp.Pages.DeviceInfoPage"
+    x:Name="thisPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:SimpleApp.Controls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Grid Grid.Row="1" Margin="0,12,0,0" MaxWidth="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                                Grid.Row="0"
+                                Style="{ThemeResource TitleTextBlockStyle}"
+                                Text="Device Info Page" />
+            <controls:NameValueControl
+                                Grid.Row="1"
+                                Name="Manufacturer Name"
+                                Value="{Binding Path=AppModel.DeviceInformationService.ManufacturerName, ElementName=thisPage}" />
+            <controls:NameValueControl
+                                Grid.Row="2"
+                                Name="Model Number"
+                                Value="{Binding Path=AppModel.DeviceInformationService.ModelNumber, ElementName=thisPage}" />
+            <controls:NameValueControl
+                                Grid.Row="3"
+                                Name="Serial Number"
+                                Value="{Binding Path=AppModel.DeviceInformationService.SerialNumber, ElementName=thisPage}" />
+            <controls:NameValueControl
+                                Grid.Row="4"
+                                Name="Hardware Revision"
+                                Value="{Binding Path=AppModel.DeviceInformationService.HardwareRevision, ElementName=thisPage}" />
+            <controls:NameValueControl
+                                Grid.Row="5"
+                                Name="Firmware Revision"
+                                Value="{Binding Path=AppModel.DeviceInformationService.FirmwareRevision, ElementName=thisPage}" />
+            <controls:NameValueControl
+                                Grid.Row="6"
+                                Name="Software Revision"
+                                Value="{Binding Path=AppModel.DeviceInformationService.SoftwareRevision, ElementName=thisPage}" />
+        </Grid>
+    </Grid>
+</Page>
