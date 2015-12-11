@@ -15,6 +15,7 @@ Demo application that reads data from SensorTag's sensors and shows it as a grap
 ## BleGame
 Do you want to control a spaceship with SensorTag? The game shows how to read data from Bluetooth and use it to control 
 a player in a simple game.
+
 ![BleGame](https://github.com/juhanak/BleClient/blob/master/images/LukeVsKirk.png?raw=true "BleGame")
 
 ## ServiceBusClient
